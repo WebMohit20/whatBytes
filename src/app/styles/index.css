@@ -1,0 +1,224 @@
+.home-container{
+    min-height: 100vh; /* min-h-screen */
+    background-image: linear-gradient(to bottom right, #EFF6FF, #FFFFFF); 
+}
+
+.header{
+    display: flex;
+    align-items: center;      /* items-center */
+    justify-content: space-between; /* justify-between */
+    padding-left: 2rem;       /* px-8 = 2rem left */
+    padding-right: 2rem;      /* px-8 = 2rem right */
+    padding-top: 1rem;        /* py-4 = 1rem top */
+    padding-bottom: 1rem;     /* py-4 = 1rem bottom */
+    background-color: #1E40AF;
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    /* border:1px solid; */
+    flex: 1 1 0%;
+    margin-left: 12rem;
+    margin-right: 6rem;
+
+    div{
+        position: relative;
+        width:100%;
+    }
+
+    input{
+        width: 100%;
+        padding-left: 3rem;     
+        padding-right: 1rem;      
+        padding-top: 0.5rem;     
+        padding-bottom: 0.5rem;   
+        border-radius: 0.25rem;   
+        background-color: #1D4ED8; 
+        color: white;             
+        outline: none;
+        
+    }
+
+    span{
+        position: absolute;
+        left: 0.75rem;           
+        top: 0.625rem;          
+        color: #BFDBFE;          
+        font-size: 1.125rem;
+    }
+}
+
+.cart-button{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;              
+    background-color: #1D4ED8; 
+    color: white;
+    padding-left: 1.25rem;    
+    padding-right: 1.25rem;
+    padding-top: 0.5rem;      
+    padding-bottom: 0.5rem;
+    border-radius: 0.25rem;   
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: #2563EB; 
+    }
+
+    span{
+        font-size:1.25rem;
+    }
+}
+
+
+.main-section{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+  .main-section {
+    flex-direction: row;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.sidebar{
+    width: 100%;
+    height: max-content;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1),
+                0 1px 2px rgba(0, 0, 0, 0.06);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    width: 18rem;
+    margin-bottom: 0;
+  }
+}
+
+.filters{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #1E40AF;
+}
+
+.filter-section{
+    margin-bottom: 1.5rem;
+    h4{
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        color: #1D4ED8;
+    }
+}
+
+.category-filter{
+    display:flex;
+    align-items:center;
+    gap: 0.5rem;
+
+    input{
+        accent-color: #2563eb;
+    }
+}
+
+.range-slider{
+    width: 100%;
+    accent-color: #2563eb;
+}
+
+.range-digits{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #60A5FA;
+    margin-top: 0.25rem;
+}
+
+.product-grid{
+    flex: 1 1 0%;
+    h2{
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1E3A8A;
+        margin-bottom: 1.5rem;
+    }
+    .product-layout{
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    @media (min-width: 640px) {
+        .product-layout {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+    @media (min-width: 1024px) {
+        .product-layout {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+}
+
+.product-card{
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1),
+                0 1px 2px rgba(0, 0, 0, 0.06);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img{
+        height: 8rem;
+        object-fit: contain;
+        margin-bottom: 1rem;
+    }
+    h3{
+        font-weight: 600;
+        font-size: 1.125rem;
+        color: #1E3A8A;
+        margin-bottom: 0.25rem;
+        text-align: center;
+    }
+    p{
+        color: #1D4ED8;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        text-align: center;
+    }
+    button{
+        width: 100%;
+        background-color: #2563EB;
+        color: #ffffff;
+        font-weight: 600;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: 0.25rem;
+        transition: all 0.2s ease;
+        margin-bottom: 0.5rem;
+        &:hover{
+            background-color: #1D4ED8;
+        }
+    }
+}
