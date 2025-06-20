@@ -1,12 +1,13 @@
 // import Image from "next/image";
+import './styles/global.css';
 import ProductProvider from "@/context/productsProvider";
-
-export default function Home() {
+import Home from "@/app/pages/index";
+export default function App() {
   return (
     <div>
-      <h1>Welcome to the Cart App</h1>
+      
       <ProductProvider>
-        
+        <Home/>
         {/* You can add components here that will use the ProductProvider context */}
       </ProductProvider>
     </div>

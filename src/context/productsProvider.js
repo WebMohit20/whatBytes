@@ -1,3 +1,4 @@
+'use client';
 import CartContext from "./globalContext";
 import { products } from "@/data/cart-data";
 
